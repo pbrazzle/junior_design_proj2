@@ -58,6 +58,8 @@ namespace BopItController
 		pinMode(POP_BUTTON, INPUT);
 		pinMode(DIG_BUTTON, INPUT);
 		pinMode(SPEAKER, OUTPUT);
+		
+		BopItIO::initializeSensors();
 	}
 	
 	void gameStart()
