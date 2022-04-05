@@ -6,6 +6,20 @@
 
 namespace BopItGames
 {
+	namespace
+	{
+		bool waitForButton(int pin, double delay)
+		{
+			unsigned long currentTime = millis();
+			
+			while (millis() - currentTime < delay)
+			{
+				if (digitalRead(pin)) return true;
+			}
+			return false;
+		}
+	}
+	
 	void alertDigIt()
 	{
 		BopItScreen::digItDisplay();
@@ -14,7 +28,7 @@ namespace BopItGames
 	
 	bool playDigIt(double delay)
 	{
-		return false;
+		return waitForButton(DIG_BUTTON, delay);
 	}
 	
 	void alertPopIt()
@@ -25,7 +39,7 @@ namespace BopItGames
 	
 	bool playPopIt(double delay)
 	{
-		return false;
+		return waitForButton(POP_BUTTON, delay);
 	}
 	
 	void alertShakeIt()
