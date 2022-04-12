@@ -14,7 +14,7 @@ namespace BopItController
 		
 		int chooseGame() { return random(3); }
 		
-		double getGameDelay() { return 1.0/score; }
+		double getGameDelay() { return 1000; }
 		
 		bool chooseAndPlay()
 		{
@@ -39,12 +39,19 @@ namespace BopItController
 		{
 			BopItScreen::gameWonDisplay();
 			BopItSound::gameWonMusic();
+			reset();
 		}
 		
 		void gameLost()
 		{
 			BopItScreen::gameLostDisplay();
 			BopItSound::gameLostMusic();
+			reset();
+		}
+		
+		void reset()
+		{
+			score = 0;
 		}
 	}
 	

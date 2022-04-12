@@ -2,6 +2,7 @@
 #define BOPITIO
 
 #include <Wire.h>
+#include "BopItConsts.hpp"
 
 namespace BopItIO
 {
@@ -24,12 +25,12 @@ namespace BopItIO
 	
 	bool readPopButton()
 	{
-		return false;
+		return digitalRead(POP_BUTTON);
 	}
 
 	bool readDigButton()
 	{
-		return false;
+		return digitalRead(DIG_BUTTON);
 	}
 
 	accelData readShakeSensor()

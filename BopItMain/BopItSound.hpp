@@ -12,10 +12,24 @@ namespace BopItSound
 	
 	namespace
 	{
+		const note C3 = {131, 0.2};
+		const note D3 = {147, 0.2};
+		const note E3 = {165, 0.2};
+		const note F3 = {175, 0.2};
+		const note G3 = {196, 0.2};
+		const note A3 = {220, 0.2};
+		const note B3 = {247, 0.2};
+		const note C4 = {262, 0.2};
+		const note D4 = {294, 0.2};
+		const note E4 = {330, 0.2};
+		const note F4 = {349, 0.2};
+		const note G4 = {392, 0.2};
 		const note A4 = {440, 0.2};
+		const note B4 = {494, 0.2};
+		const note C5 = {523, 0.2};
 		
-		const int gameOverLength = 1;
-		const note gameOverSong[gameOverLength] = {A4};
+		const int gameOverLength = 5;
+		const note gameOverSong[gameOverLength] = {C4, B3, A3, G3, C3};
 	}
 	
 	void initializeSpeaker()
