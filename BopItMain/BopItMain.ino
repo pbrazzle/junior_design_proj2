@@ -10,7 +10,6 @@
 		Games - Win conditions for shake it
 		Sound - Write songs
 		Display - Write display functions
-		Sound - Test speaker
 */
 
 void setup()

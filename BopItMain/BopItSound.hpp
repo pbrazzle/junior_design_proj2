@@ -12,24 +12,43 @@ namespace BopItSound
 	
 	namespace
 	{
-		const note C3 = {131, 0.2};
-		const note D3 = {147, 0.2};
-		const note E3 = {165, 0.2};
-		const note F3 = {175, 0.2};
-		const note G3 = {196, 0.2};
-		const note A3 = {220, 0.2};
-		const note B3 = {247, 0.2};
-		const note C4 = {262, 0.2};
-		const note D4 = {294, 0.2};
-		const note E4 = {330, 0.2};
-		const note F4 = {349, 0.2};
-		const note G4 = {392, 0.2};
-		const note A4 = {440, 0.2};
-		const note B4 = {494, 0.2};
-		const note C5 = {523, 0.2};
+		const double noteTime = 0.2;
+		const note C3 = {131, noteTime};
+		const note D3 = {147, noteTime};
+		const note E3 = {165, noteTime};
+		const note F3 = {175, noteTime};
+		const note G3 = {196, noteTime};
+		const note A3 = {220, noteTime};
+		const note B3 = {247, noteTime};
+		const note C4 = {262, noteTime};
+		const note D4 = {294, noteTime};
+		const note E4 = {330, noteTime};
+		const note F4 = {349, noteTime};
+		const note G4 = {392, noteTime};
+		const note A4 = {440, noteTime};
+		const note B4 = {494, noteTime};
+		const note C5 = {523, noteTime};
 		
 		const int gameOverLength = 5;
 		const note gameOverSong[gameOverLength] = {C4, B3, A3, G3, C3};
+		
+		const int gameWonLength = 1;
+		const note gameWonSong[gameWonLength] = {C4};
+		
+		const int gameLostLength = 1;
+		const note gameLostSong[gameLostLength] = {C4};
+		
+		const int gameStartLength = 1;
+		const note gameStartSong[gameStartLength] = {C4};
+		
+		const int digItLength = 1;
+		const note digItSong[digItLength] = {C4};
+		
+		const int popItLength = 1;
+		const note popItSong[popItLength] = {C4};
+		
+		const int shakeItLength = 1;
+		const note shakeItSong[shakeItLength] = {C4};
 	}
 	
 	void initializeSpeaker()
@@ -61,32 +80,32 @@ namespace BopItSound
 	
 	void gameWonMusic()
 	{
-		
+		for (int i = 0; i < gameWonLength; i++) playTone(gameWonSong[i]);
 	}
 	
 	void gameLostMusic()
 	{
-		
+		for (int i = 0; i < gameLostLength; i++) playTone(gameLostSong[i]);
 	}
 	
 	void gameStartMusic()
 	{
-		
+		for (int i = 0; i < gameStartLength; i++) playTone(gameStartSong[i]);
 	}
 	
 	void digItMusic()
 	{
-		
+		for (int i = 0; i < digItLength; i++) playTone(digItSong[i]);
 	}
 	
 	void popItMusic()
 	{
-		
+		for (int i = 0; i < popItLength; i++) playTone(popItSong[i]);
 	}
 	
 	void shakeItMusic()
 	{
-		
+		for (int i = 0; i < shakeItLength; i++) playTone(shakeItSong[i]);
 	}
 }
 /*

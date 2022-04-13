@@ -50,6 +50,14 @@ namespace BopItGames
 	
 	bool playShakeIt(double delay)
 	{
+		unsigned long currentTime = millis();
+		
+		while (millis() - currentTime < delay)
+		{
+			BopItIO::acceldata data = BopItIO::readShakeSensor();
+			//Win condition values for shake it?
+		}
+		
 		return false;
 	}
 }
