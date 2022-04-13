@@ -9,6 +9,7 @@
 	TODO:
 		Games - Win conditions for shake it
 		Sound - Write songs
+		Controller - Make game delay function
 */
 
 void setup()
