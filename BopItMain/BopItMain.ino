@@ -7,11 +7,9 @@
 
 /*
 	TODO:
-		Controller - Add power button functionality
 		Games - Win conditions for shake it
 		Sound - Write songs
-		Display - Write display strings
-		Consts - Set GPIO pins
+		Display - Write display functions
 		Sound - Test speaker
 */
 

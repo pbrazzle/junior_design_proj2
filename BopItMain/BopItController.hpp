@@ -12,6 +12,8 @@ namespace BopItController
 	{
 		int score = 0;
 		
+		bool playing = false;
+		
 		int chooseGame() { return random(3); }
 		
 		double getGameDelay() { return 1000; }
@@ -34,6 +36,13 @@ namespace BopItController
 					return playShakeIt(delay);
 			}
 		}
+
+		void reset()
+		{
+			BopItScreen::clearDisplay();
+			score = 0;
+			while (!playing);
+		}
 		
 		void gameWon()
 		{
@@ -49,9 +58,9 @@ namespace BopItController
 			reset();
 		}
 		
-		void reset()
+		void startButtonPressed()
 		{
-			score = 0;
+			playing = !playing;
 		}
 	}
 	
@@ -65,9 +74,12 @@ namespace BopItController
 		pinMode(POP_BUTTON, INPUT);
 		pinMode(DIG_BUTTON, INPUT);
 		pinMode(SPEAKER, OUTPUT);
+		attachInterrupt(digitalPinToInterrupt(START_BUTTON), startButtonPressed, RISING);
 		
 		BopItIO::initializeSensors();
 		BopItSound::initializeSpeaker();
+		
+		while (!playing);
 	}
 	
 	void gameStart()
@@ -78,6 +90,7 @@ namespace BopItController
 	
 	void playRound()
 	{
+		if (!playing) reset();
 		if (!chooseAndPlay()) gameLost();
 		score++;
 		if (score == 99) gameWon();

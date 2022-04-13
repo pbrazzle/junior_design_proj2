@@ -35,6 +35,11 @@ namespace BopItScreen
 	{
 		
 	}	
+	
+	void clearDisplay()
+	{
+		
+	}
 }
 
 #endif
