@@ -78,6 +78,7 @@ namespace BopItController
 		
 		BopItIO::initializeSensors();
 		BopItSound::initializeSpeaker();
+		BopItScreen::initializeDisplay();
 		
 		while (!playing);
 	}
