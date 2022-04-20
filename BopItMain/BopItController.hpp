@@ -8,15 +8,21 @@
 
 namespace BopItController
 {
+  void gameStart()
+  {
+    //Wait for start button
+    while (!digitalRead(START_BUTTON));
+    BopItScreen::gameStartDisplay();
+    BopItSound::gameStartMusic();
+  }
+  
 	namespace
 	{
 		int score = 0;
 		
-		bool playing = false;
-		
 		int chooseGame() { return random(3); }
 		
-		double getGameDelay() { return 1000; }
+		double getGameDelay() { return 2000 - 10*score; }
 		
 		bool chooseAndPlay()
 		{
@@ -27,27 +33,35 @@ namespace BopItController
 			{
 				case DIG_IT:
 					alertDigIt();
+          BopItScreen::writeToDisplay("Score: " + String(score));
 					return playDigIt(delay);
 				case POP_IT:
 					alertPopIt();
+          BopItScreen::writeToDisplay("Score: " + String(score));
 					return playPopIt(delay);
 				case SHAKE_IT:
 					alertShakeIt();
+          BopItScreen::writeToDisplay("Score: " + String(score));
 					return playShakeIt(delay);
 			}
+      return false;
 		}
 
 		void reset()
 		{
 			BopItScreen::clearDisplay();
+      BopItSound::gameOverMusic();
+			delay(1000);
 			score = 0;
-			while (!playing);
+      gameStart();
+			//while (!playing);
 		}
 		
 		void gameWon()
 		{
 			BopItScreen::gameWonDisplay();
 			BopItSound::gameWonMusic();
+      delay(500);
 			reset();
 		}
 		
@@ -55,12 +69,8 @@ namespace BopItController
 		{
 			BopItScreen::gameLostDisplay();
 			BopItSound::gameLostMusic();
+      delay(500);
 			reset();
-		}
-		
-		void startButtonPressed()
-		{
-			playing = !playing;
 		}
 	}
 	
@@ -74,27 +84,19 @@ namespace BopItController
 		pinMode(POP_BUTTON, INPUT);
 		pinMode(DIG_BUTTON, INPUT);
 		pinMode(SPEAKER, OUTPUT);
-		attachInterrupt(digitalPinToInterrupt(START_BUTTON), startButtonPressed, RISING);
-		
+	
 		BopItIO::initializeSensors();
 		BopItSound::initializeSpeaker();
 		BopItScreen::initializeDisplay();
-		
-		while (!playing);
-	}
-	
-	void gameStart()
-	{
-		BopItScreen::gameStartDisplay();
-		BopItSound::gameStartMusic();
 	}
 	
 	void playRound()
 	{
-		if (!playing) reset();
+		//if (!playing) reset();
 		if (!chooseAndPlay()) gameLost();
 		score++;
 		if (score == 99) gameWon();
+    BopItScreen::clearDisplay();
 	}
 }
 

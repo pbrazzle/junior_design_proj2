@@ -25,12 +25,12 @@ namespace BopItIO
 	
 	bool readPopButton()
 	{
-		return digitalRead(POP_BUTTON);
+		return !digitalRead(POP_BUTTON);
 	}
 
 	bool readDigButton()
 	{
-		return digitalRead(DIG_BUTTON);
+		return !digitalRead(DIG_BUTTON);
 	}
 
 	accelData readShakeSensor()

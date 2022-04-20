@@ -2,17 +2,19 @@
 #define BOPITSOUND
 
 #include "BopItConsts.hpp"
+#include "BopItScreen.hpp"
 
 namespace BopItSound
 {	
 	struct note
 	{
-		double freq, time;
+		int freq, time;
 	};
 	
 	namespace
 	{
-		const double noteTime = 0.2;
+		const int noteTime = 180;
+    const int noteTimeLong = 250;
 		const note C3 = {131, noteTime};
 		const note D3 = {147, noteTime};
 		const note E3 = {165, noteTime};
@@ -28,27 +30,44 @@ namespace BopItSound
 		const note A4 = {440, noteTime};
 		const note B4 = {494, noteTime};
 		const note C5 = {523, noteTime};
+    const note D5 = {587, noteTime};
+    const note C3l = {131, noteTimeLong};
+    const note D3l = {147, noteTimeLong};
+    const note E3l = {165, noteTimeLong};
+    const note F3l = {175, noteTimeLong};
+    const note G3l = {196, noteTimeLong};
+    const note A3l = {220, noteTimeLong};
+    const note B3l = {247, noteTimeLong};
+    const note C4l = {262, noteTimeLong};
+    const note D4l = {294, noteTimeLong};
+    const note E4l = {330, noteTimeLong};
+    const note F4l = {349, noteTimeLong};
+    const note G4l = {392, noteTimeLong};
+    const note A4l = {440, noteTimeLong};
+    const note B4l = {494, noteTimeLong};
+    const note C5l = {523, noteTimeLong};
+    const note D5l = {587, noteTimeLong};
 		
-		const int gameOverLength = 5;
-		const note gameOverSong[gameOverLength] = {C4, B3, A3, G3, C3};
+		const int gameOverLength = 5; 
+		const note gameOverSong[gameOverLength] = {C4l, E3l, G3l, B3l, C4l};
 		
-		const int gameWonLength = 1;
-		const note gameWonSong[gameWonLength] = {C4};
+		const int gameWonLength = 8;
+		const note gameWonSong[gameWonLength] = {C3l, G3l, A3l, B3l, C4l, C4l, B3l, C4l};
 		
-		const int gameLostLength = 1;
-		const note gameLostSong[gameLostLength] = {C4};
+		const int gameLostLength = 5; 
+		const note gameLostSong[gameLostLength] = {C4l, B3l, A3l, G3l, C3l};
 		
-		const int gameStartLength = 1;
-		const note gameStartSong[gameStartLength] = {C4};
+		const int gameStartLength = 15;
+		const note gameStartSong[gameStartLength] = {A4l, F4l, D5l, C5l, C5l, A4l, F4l, F4l, D4l, G4l, G4l, G4l, G4l, G4l, G4l};
 		
-		const int digItLength = 1;
-		const note digItSong[digItLength] = {C4};
+		const int digItLength = 5;
+		const note digItSong[digItLength] = {C4, B3, C4, D4, C4};
 		
-		const int popItLength = 1;
-		const note popItSong[popItLength] = {C4};
+		const int popItLength = 5;
+		const note popItSong[popItLength] = {C4, E4, G4, E4, C4};
 		
-		const int shakeItLength = 1;
-		const note shakeItSong[shakeItLength] = {C4};
+		const int shakeItLength = 5;
+		const note shakeItSong[shakeItLength] = {C4, B3, C4, B3, C4};
 	}
 	
 	void initializeSpeaker()
@@ -62,13 +81,13 @@ namespace BopItSound
 	
 	void playTone(const note n)
 	{
-		int startTime = millis();
-		while (millis() - startTime < n.time*1000)
+		long int startTime = millis();
+		while (millis() - startTime < n.time)
 		{
 			digitalWrite(SPEAKER, 0);
-			delay(1000/n.freq);
+			delayMicroseconds(500000/n.freq);
 			digitalWrite(SPEAKER, 1);
-			delay(1000/n.freq);
+			delayMicroseconds(500000/n.freq);
 		}			
 		digitalWrite(SPEAKER, 0);
 	}

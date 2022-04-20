@@ -2,7 +2,7 @@
 #define BOPITSCREEN
 
 //Using Sunfounder LCD 1602 which works with the LiquidCrystal.h Arduino library
-#include <LiquidCrystal.h>
+#include <LiquidCrystal_I2C.h>
 
 namespace BopItScreen
 {
@@ -10,13 +10,24 @@ namespace BopItScreen
 	{
 		LiquidCrystal_I2C lcd(0x27,20,4);
 	}
+
+ void writeToDisplay(String s)
+ {
+   lcd.setCursor(1,0);
+   lcd.print(s);
+ }
 	
 	void initializeDisplay()
 	{
 		lcd.init();
 		lcd.backlight();
 	}
-	
+
+  void clearDisplay()
+  {
+    lcd.clear();
+  }
+  
 	void gameWonDisplay()
 	{
 		clearDisplay();
@@ -70,11 +81,6 @@ namespace BopItScreen
 		lcd.setCursor(1,1);
 		lcd.print("Shake It!");
 	}	
-	
-	void clearDisplay()
-	{
-		lcd.clear();
-	}
 }
 
 #endif

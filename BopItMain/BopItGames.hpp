@@ -3,23 +3,10 @@
 
 #include "BopItSound.hpp"
 #include "BopItScreen.hpp"
+#include "BopItIO.hpp"
 
 namespace BopItGames
-{
-	namespace
-	{
-		bool waitForButton(int pin, double delay)
-		{
-			unsigned long currentTime = millis();
-			
-			while (millis() - currentTime < delay)
-			{
-				if (digitalRead(pin)) return true;
-			}
-			return false;
-		}
-	}
-	
+{	
 	void alertDigIt()
 	{
 		BopItScreen::digItDisplay();
@@ -28,7 +15,13 @@ namespace BopItGames
 	
 	bool playDigIt(double delay)
 	{
-		return waitForButton(DIG_BUTTON, delay);
+    unsigned long currentTime = millis();
+    
+    while (millis() - currentTime < delay)
+    {
+      if (BopItIO::readDigButton()) return true;
+    }
+    return false;
 	}
 	
 	void alertPopIt()
@@ -39,7 +32,13 @@ namespace BopItGames
 	
 	bool playPopIt(double delay)
 	{
-		return waitForButton(POP_BUTTON, delay);
+    unsigned long currentTime = millis();
+    
+    while (millis() - currentTime < delay)
+    {
+      if (BopItIO::readPopButton()) return true;
+    }
+    return false;
 	}
 	
 	void alertShakeIt()
@@ -54,8 +53,8 @@ namespace BopItGames
 		
 		while (millis() - currentTime < delay)
 		{
-			BopItIO::acceldata data = BopItIO::readShakeSensor();
-			//Win condition values for shake it?
+			BopItIO::accelData data = BopItIO::readShakeSensor();
+      if (data.accelX&0x8000 && data.accelY&0x8000) return true;
 		}
 		
 		return false;
