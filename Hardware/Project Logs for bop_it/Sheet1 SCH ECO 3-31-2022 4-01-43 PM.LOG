@@ -1,0 +1,16 @@
+Change Component Footprint: Designator=P0 Old Footprint=SMTC-TSW-102-26-XX-S New Footprint=JST-B2P-VH(LF)(SN)_V
+Change Component Footprint: Designator=P1 Old Footprint=SMTC-TSW-102-26-XX-S New Footprint=JST-B2P-VH(LF)(SN)_V
+Change Component Footprint: Designator=P2 Old Footprint=SMTC-TSW-102-26-XX-S New Footprint=JST-B2P-VH(LF)(SN)_V
+Change Component Footprint: Designator=P3 Old Footprint=SMTC-TSW-102-26-XX-S New Footprint=JST-B2P-VH(LF)(SN)_V
+Change Component Comment: Designator=P0 Old Comment=battery connector New Comment=B2P-VH(LF)(SN)
+Change Component Comment: Designator=P1 Old Comment=battery connector New Comment=B2P-VH(LF)(SN)
+Change Component Comment: Designator=P2 Old Comment=battery connector New Comment=B2P-VH(LF)(SN)
+Change Component Comment: Designator=P3 Old Comment=battery connector New Comment=B2P-VH(LF)(SN)
+Change Pin Designator/Name:  Old Designator=P0-1 Old Name=1 New Designator =2 New Name=2
+Change Pin Designator/Name:  Old Designator=P0-2 Old Name=2 New Designator =1 New Name=1
+Change Pin Designator/Name:  Old Designator=P1-1 Old Name=1 New Designator =2 New Name=2
+Change Pin Designator/Name:  Old Designator=P1-2 Old Name=2 New Designator =1 New Name=1
+Change Pin Designator/Name:  Old Designator=P2-1 Old Name=1 New Designator =2 New Name=2
+Change Pin Designator/Name:  Old Designator=P2-2 Old Name=2 New Designator =1 New Name=1
+Change Pin Designator/Name:  Old Designator=P3-1 Old Name=1 New Designator =2 New Name=2
+Change Pin Designator/Name:  Old Designator=P3-2 Old Name=2 New Designator =1 New Name=1

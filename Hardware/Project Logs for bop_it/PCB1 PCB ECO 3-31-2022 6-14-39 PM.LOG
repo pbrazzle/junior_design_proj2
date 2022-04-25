@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=NetE12_1 Pin=E12-1
+Removed Pin From Net: NetName=NetE56_1 Pin=E56-1
+Change Component Designator: OldDesignator=E12 NewDesignator=E56
+Change Component Designator: OldDesignator=E56 NewDesignator=E12
+Add Component: Footprint Not Found 28P3_ATM
+Add Component: Footprint Not Found 28P3_ATM
+Added Pin To Net: NetName=NetE12_1 Pin=E12-1
+Added Pin To Net: NetName=NetE56_1 Pin=E56-1
+Add Pin To Net: Unknown Pin: Pin U?-1
+Add Pin To Net: Unknown Pin: Pin U?-2
+Add Pin To Net: Unknown Pin: Pin U?-3
+Add Pin To Net: Unknown Pin: Pin U?-4
+Add Pin To Net: Unknown Pin: Pin U?-5
+Add Pin To Net: Unknown Pin: Pin U?-7
+Add Pin To Net: Unknown Pin: Pin U?-8
+Add Pin To Net: Unknown Pin: Pin U?-9
+Add Pin To Net: Unknown Pin: Pin U?-10
+Add Pin To Net: Unknown Pin: Pin U?-17
+Add Pin To Net: Unknown Pin: Pin U?-19
+Add Pin To Net: Unknown Pin: Pin U?-20
+Add Pin To Net: Unknown Pin: Pin U?-21
+Add Pin To Net: Unknown Pin: Pin U?-22
+Add Pin To Net: Unknown Pin: Pin U?-27
+Add Pin To Net: Unknown Pin: Pin U?-28
+Added Pin To Net: NetName=NetE56_2 Pin=E56-2
+Added Net: Name=NetE56_2
+Add Class Member: Failed to add class member : Component U? ATMEGA328P-PU
+Add Class Member: Failed to add class member : Component U? ATMEGA328P-PU
+Added Room: Name=Sheet1

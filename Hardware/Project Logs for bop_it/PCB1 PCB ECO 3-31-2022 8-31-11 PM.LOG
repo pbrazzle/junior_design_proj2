@@ -1,0 +1,47 @@
+Added Component: Designator=U?(ATML-28P3)
+Add component (AddParameter): Name = "Case/Package"; Value = "DIP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. 8271J, 11/2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Density"; Value = "32KB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ethernet Channels"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "I/Os"; Value = "23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Interface"; Value = "USART"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Atmel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.atmel.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Clock Frequency"; Value = "20MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "5.5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "1.8V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "TH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "28-Pin Plastic Dual Inline Package, Body 34.671 x 7.3025 mm, Pitch 2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "28P3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package URL"; Value = "http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Version"; Value = "Rev. B, 09/2001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Rail/Tube"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RAM Size"; Value = "2KB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "True"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found 28P3_ATM
+Added Pin To Net: NetName=NetE34_2 Pin=U?-1
+Added Pin To Net: NetName=NetP0_1 Pin=U?-2
+Added Pin To Net: NetName=NetP1_1 Pin=U?-3
+Added Pin To Net: NetName=NetP2_1 Pin=U?-4
+Added Pin To Net: NetName=NetP3_1 Pin=U?-5
+Added Pin To Net: NetName=Net100pF_2 Pin=U?-7
+Added Pin To Net: NetName=GND Pin=U?-8
+Added Pin To Net: NetName=NetE12_1 Pin=U?-17
+Added Pin To Net: NetName=NetE56_2 Pin=U?-18
+Added Pin To Net: NetName=NetE56_1 Pin=U?-19
+Added Pin To Net: NetName=Net100pF_2 Pin=U?-20
+Added Pin To Net: NetName=Net100pF_2 Pin=U?-21
+Added Pin To Net: NetName=GND Pin=U?-22
+Added Pin To Net: NetName=NetACC_4 Pin=U?-27
+Added Pin To Net: NetName=NetACC_3 Pin=U?-28
+Added Member To Class: ClassName=Sheet1 Member=Component E56 battery connector
+Added Member To Class: ClassName=Sheet1 Member=Component R_reset MFR-25FBF52-475R
+Added Member To Class: ClassName=Sheet1 Member=Component U? ATMEGA328P-PU
+Added Member To Class: ClassName=Sheet1 Member=Component U? ATMEGA328P-PU
+Added Room: Name=Sheet1
